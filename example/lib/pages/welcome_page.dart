@@ -8,11 +8,10 @@ import 'package:better_player_example/pages/clearkey_page.dart';
 import 'package:better_player_example/pages/controller_controls_page.dart';
 import 'package:better_player_example/pages/controls_always_visible_page.dart';
 import 'package:better_player_example/pages/controls_configuration_page.dart';
-import 'package:better_player_example/pages/custom_controls/change_player_theme_page.dart';
 import 'package:better_player_example/pages/dash_page.dart';
 import 'package:better_player_example/pages/drm_page.dart';
 import 'package:better_player_example/pages/event_listener_page.dart';
-import 'package:better_player_example/pages/fade_placeholder_page.dart';
+import 'package:better_player_example/pages/fullscreen_display.dart';
 import 'package:better_player_example/pages/hls_audio_page.dart';
 import 'package:better_player_example/pages/hls_subtitles_page.dart';
 import 'package:better_player_example/pages/hls_tracks_page.dart';
@@ -22,12 +21,10 @@ import 'package:better_player_example/pages/notification_player_page.dart';
 import 'package:better_player_example/pages/overridden_aspect_ratio_page.dart';
 import 'package:better_player_example/pages/overriden_duration_page.dart';
 import 'package:better_player_example/pages/picture_in_picture_page.dart';
-import 'package:better_player_example/pages/placeholder_until_play_page.dart';
 import 'package:better_player_example/pages/playlist_page.dart';
 import 'package:better_player_example/pages/resolutions_page.dart';
 import 'package:better_player_example/pages/reusable_video_list/reusable_video_list_page.dart';
 import 'package:better_player_example/pages/rotation_and_fit_page.dart';
-import 'package:better_player_example/pages/subtitles_page.dart';
 import 'package:better_player_example/pages/video_list/video_list_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -71,6 +68,9 @@ class _WelcomePageState extends State<WelcomePage> {
   );
 
   List<Widget> buildExampleElementWidgets() => [
+    _buildExampleElementWidget('full player', () {
+      _navigateToPage(const FullscreenDisplay());
+    }),
     _buildExampleElementWidget('Basic player', () {
       _navigateToPage(const BasicPlayerPage());
     }),
@@ -83,9 +83,9 @@ class _WelcomePageState extends State<WelcomePage> {
     _buildExampleElementWidget('Event listener', () {
       _navigateToPage(const EventListenerPage());
     }),
-    _buildExampleElementWidget('Subtitles', () {
-      _navigateToPage(const SubtitlesPage());
-    }),
+    // _buildExampleElementWidget('Subtitles', () {
+    //   _navigateToPage(const SubtitlesPage());
+    // }),
     _buildExampleElementWidget('Resolutions', () {
       _navigateToPage(const ResolutionsPage());
     }),
@@ -128,15 +128,15 @@ class _WelcomePageState extends State<WelcomePage> {
     _buildExampleElementWidget('Reusable video list', () {
       _navigateToPage(const ReusableVideoListPage());
     }),
-    _buildExampleElementWidget('Fade placeholder', () {
-      _navigateToPage(const FadePlaceholderPage());
-    }),
-    _buildExampleElementWidget('Placeholder until play', () {
-      _navigateToPage(const PlaceholderUntilPlayPage());
-    }),
-    _buildExampleElementWidget('Change player theme', () {
-      _navigateToPage(const ChangePlayerThemePage());
-    }),
+    // _buildExampleElementWidget('Fade placeholder', () {
+    //   _navigateToPage(const FadePlaceholderPage());
+    // }),
+    // _buildExampleElementWidget('Placeholder until play', () {
+    //   _navigateToPage(const PlaceholderUntilPlayPage());
+    // }),
+    // _buildExampleElementWidget('Change player theme', () {
+    //   _navigateToPage(const ChangePlayerThemePage());
+    // }),
     _buildExampleElementWidget('Overridden duration', () {
       _navigateToPage(const OverriddenDurationPage());
     }),

@@ -1,1 +1,1 @@
-rootProject.name = "better_player_plus"
+rootProject.name = "custom_better_player_plus"

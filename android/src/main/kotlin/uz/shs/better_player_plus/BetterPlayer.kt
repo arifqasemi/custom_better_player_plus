@@ -1,4 +1,4 @@
-package uz.shs.better_player_plus
+package uz.shs.custom_better_player_plus
 
 import android.annotation.SuppressLint
 import android.app.NotificationChannel
@@ -15,9 +15,9 @@ import android.os.Looper
 import android.support.v4.media.MediaMetadataCompat
 import android.support.v4.media.session.MediaSessionCompat
 import android.support.v4.media.session.PlaybackStateCompat
-import uz.shs.better_player_plus.DataSourceUtils.getUserAgent
-import uz.shs.better_player_plus.DataSourceUtils.isHTTP
-import uz.shs.better_player_plus.DataSourceUtils.getDataSourceFactory
+import uz.shs.custom_better_player_plus.DataSourceUtils.getUserAgent
+import uz.shs.custom_better_player_plus.DataSourceUtils.isHTTP
+import uz.shs.custom_better_player_plus.DataSourceUtils.getDataSourceFactory
 import io.flutter.plugin.common.EventChannel
 import io.flutter.view.TextureRegistry.SurfaceTextureEntry
 import io.flutter.plugin.common.MethodChannel

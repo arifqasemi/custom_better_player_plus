@@ -1,8 +1,8 @@
 import 'dart:convert';
 import 'dart:io';
-import 'package:better_player_plus/better_player_plus.dart';
-import 'package:better_player_plus/src/core/better_player_utils.dart';
-import 'package:better_player_plus/src/subtitles/better_player_subtitle.dart';
+import 'package:custom_better_player_plus/better_player_plus.dart';
+import 'package:custom_better_player_plus/src/core/better_player_utils.dart';
+import 'package:custom_better_player_plus/src/subtitles/better_player_subtitle.dart';
 
 class BetterPlayerSubtitlesFactory {
   static Future<List<BetterPlayerSubtitle>> parseSubtitles(BetterPlayerSubtitlesSource source) async {

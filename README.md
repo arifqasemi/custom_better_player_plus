@@ -1,6 +1,6 @@
 # Better Player Plus
 
-[![Pub](https://img.shields.io/pub/v/better_player_plus.svg)](https://pub.dev/packages/better_player_plus)
+[![Pub](https://img.shields.io/pub/v/custom_better_player_plus.svg)](https://pub.dev/packages/custom_better_player_plus)
 [![License](https://img.shields.io/github/license/SunnatilloShavkatov/betterplayer.svg?style=flat)](https://github.com/SunnatilloShavkatov/betterplayer)
 [![Platform](https://img.shields.io/badge/platform-flutter-blue.svg)](https://flutter.dev)
 
@@ -54,13 +54,13 @@ Add the dependency in your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  better_player_plus: ^1.1.2
+  custom_better_player_plus: ^1.1.2
 ```
 
 Import the package:
 
 ```dart
-import 'package:better_player_plus/better_player_plus.dart';
+import 'package:custom_better_player_plus/custom_better_player_plus.dart';
 ```
 
 ### Quick start

@@ -1,6 +1,6 @@
-# better_player_plus example
+# custom_better_player_plus example
 
-A minimal Flutter app demonstrating `better_player_plus` usage.
+A minimal Flutter app demonstrating `custom_better_player_plus` usage.
 
 ### Getting Started
 

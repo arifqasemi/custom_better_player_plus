@@ -1,3 +1,4 @@
+import 'package:better_player_example/pages/fullscreen_display.dart';
 import 'package:better_player_example/pages/welcome_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -12,11 +13,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) => Shortcuts(
     shortcuts: <LogicalKeySet, Intent>{LogicalKeySet(LogicalKeyboardKey.select): const ActivateIntent()},
     child: MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Better player demo',
       localizationsDelegates: const [GlobalMaterialLocalizations.delegate, GlobalWidgetsLocalizations.delegate],
       supportedLocales: const [Locale('en', 'US'), Locale('pl', 'PL')],
       theme: ThemeData(primarySwatch: Colors.green),
-      home: const WelcomePage(),
+      home: const FullscreenDisplay(),
     ),
   );
 }

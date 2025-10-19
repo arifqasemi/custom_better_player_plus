@@ -1,7 +1,7 @@
 // Copyright 2019 The Chromium Authors. All rights reserved.
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
-package uz.shs.better_player_plus
+package uz.shs.custom_better_player_plus
 
 import io.flutter.plugin.common.EventChannel.EventSink
 import java.util.ArrayList

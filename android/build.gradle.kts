@@ -3,7 +3,7 @@ plugins {
     id("org.jetbrains.kotlin.android")
 }
 
-group = "uz.shs.better_player_plus"
+group = "uz.shs.custom_better_player_plus"
 version = "1.0-SNAPSHOT"
 
 val lifecycleVersion = "2.9.4"
@@ -30,7 +30,7 @@ allprojects {
 }
 
 android {
-    namespace = "uz.shs.better_player_plus"
+    namespace = "uz.shs.custom_better_player_plus"
     compileSdk = 36
 
     defaultConfig {

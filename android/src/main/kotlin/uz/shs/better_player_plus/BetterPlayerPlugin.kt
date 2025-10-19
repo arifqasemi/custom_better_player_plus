@@ -1,7 +1,7 @@
 // Copyright 2017 The Chromium Authors. All rights reserved.
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
-package uz.shs.better_player_plus
+package uz.shs.custom_better_player_plus
 
 import android.app.Activity
 import android.app.PictureInPictureParams
@@ -15,7 +15,7 @@ import android.util.LongSparseArray
 import android.util.Rational
 import androidx.annotation.OptIn
 import androidx.media3.common.util.UnstableApi
-import uz.shs.better_player_plus.BetterPlayerCache.releaseCache
+import uz.shs.custom_better_player_plus.BetterPlayerCache.releaseCache
 import io.flutter.embedding.engine.plugins.FlutterPlugin
 import io.flutter.embedding.engine.plugins.activity.ActivityAware
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler

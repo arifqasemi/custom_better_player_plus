@@ -6,9 +6,9 @@
 import 'dart:async';
 
 // Flutter imports:
-import 'package:better_player_plus/src/configuration/better_player_buffering_configuration.dart';
-import 'package:better_player_plus/src/video_player/method_channel_video_player.dart';
-import 'package:better_player_plus/src/video_player/video_player.dart' show VideoPlayerController;
+import 'package:custom_better_player_plus/src/configuration/better_player_buffering_configuration.dart';
+import 'package:custom_better_player_plus/src/video_player/method_channel_video_player.dart';
+import 'package:custom_better_player_plus/src/video_player/video_player.dart' show VideoPlayerController;
 import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
 

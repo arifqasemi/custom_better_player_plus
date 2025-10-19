@@ -1,9 +1,9 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:better_player_plus/src/asms/better_player_asms_data_holder.dart';
-import 'package:better_player_plus/src/core/better_player_utils.dart';
-import 'package:better_player_plus/src/hls/better_player_hls_utils.dart';
+import 'package:custom_better_player_plus/src/asms/better_player_asms_data_holder.dart';
+import 'package:custom_better_player_plus/src/core/better_player_utils.dart';
+import 'package:custom_better_player_plus/src/hls/better_player_hls_utils.dart';
 
 ///Base helper class for ASMS parsing.
 class BetterPlayerAsmsUtils {

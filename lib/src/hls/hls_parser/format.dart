@@ -1,6 +1,6 @@
-import 'package:better_player_plus/src/hls/hls_parser/drm_init_data.dart';
-import 'package:better_player_plus/src/hls/hls_parser/metadata.dart';
-import 'package:better_player_plus/src/hls/hls_parser/util.dart';
+import 'package:custom_better_player_plus/src/hls/hls_parser/drm_init_data.dart';
+import 'package:custom_better_player_plus/src/hls/hls_parser/metadata.dart';
+import 'package:custom_better_player_plus/src/hls/hls_parser/util.dart';
 
 /// Representation of a media format.
 class Format {

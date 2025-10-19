@@ -2,7 +2,7 @@
 # To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
 #
 Pod::Spec.new do |s|
-  s.name             = 'better_player_plus'
+  s.name             = 'custom_better_player_plus'
   s.version          = '1.1.2'
   s.summary          = 'Advanced video player for Flutter with advanced configuration options.'
   s.description      = <<-DESC

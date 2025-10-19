@@ -1,4 +1,4 @@
-import 'package:better_player_plus/src/hls/hls_parser/scheme_data.dart';
+import 'package:custom_better_player_plus/src/hls/hls_parser/scheme_data.dart';
 import 'package:collection/collection.dart';
 import 'package:flutter/foundation.dart';
 

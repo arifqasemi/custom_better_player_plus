@@ -1,6 +1,6 @@
 class Constants {
   const Constants._();
-
+  static const String fullscreen = 'test-1.mp4';
   static const String bugBuckBunnyVideoUrl =
       'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4';
   static const String forBiggerBlazesUrl =

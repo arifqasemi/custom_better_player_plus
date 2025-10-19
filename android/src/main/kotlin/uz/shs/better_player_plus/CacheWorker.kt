@@ -1,4 +1,4 @@
-package uz.shs.better_player_plus
+package uz.shs.custom_better_player_plus
 
 import android.content.Context
 import android.util.Log
@@ -6,9 +6,9 @@ import androidx.media3.common.util.UnstableApi
 import androidx.media3.datasource.DataSpec
 import androidx.media3.datasource.HttpDataSource
 import androidx.media3.datasource.cache.CacheWriter
-import uz.shs.better_player_plus.DataSourceUtils.isHTTP
-import uz.shs.better_player_plus.DataSourceUtils.getUserAgent
-import uz.shs.better_player_plus.DataSourceUtils.getDataSourceFactory
+import uz.shs.custom_better_player_plus.DataSourceUtils.isHTTP
+import uz.shs.custom_better_player_plus.DataSourceUtils.getUserAgent
+import uz.shs.custom_better_player_plus.DataSourceUtils.getDataSourceFactory
 import androidx.work.WorkerParameters
 import androidx.work.Worker
 import java.lang.Exception

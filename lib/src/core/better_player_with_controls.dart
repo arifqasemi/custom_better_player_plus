@@ -1,13 +1,13 @@
 import 'dart:async';
 import 'dart:io';
 import 'dart:math';
-import 'package:better_player_plus/better_player_plus.dart';
-import 'package:better_player_plus/src/configuration/better_player_controller_event.dart';
-import 'package:better_player_plus/src/controls/better_player_cupertino_controls.dart';
-import 'package:better_player_plus/src/controls/better_player_material_controls.dart';
-import 'package:better_player_plus/src/core/better_player_utils.dart';
-import 'package:better_player_plus/src/subtitles/better_player_subtitles_drawer.dart';
-import 'package:better_player_plus/src/video_player/video_player.dart';
+import 'package:custom_better_player_plus/better_player_plus.dart';
+import 'package:custom_better_player_plus/src/configuration/better_player_controller_event.dart';
+import 'package:custom_better_player_plus/src/controls/better_player_cupertino_controls.dart';
+import 'package:custom_better_player_plus/src/controls/better_player_material_controls.dart';
+import 'package:custom_better_player_plus/src/core/better_player_utils.dart';
+import 'package:custom_better_player_plus/src/subtitles/better_player_subtitles_drawer.dart';
+import 'package:custom_better_player_plus/src/video_player/video_player.dart';
 import 'package:flutter/material.dart';
 
 class BetterPlayerWithControls extends StatefulWidget {
@@ -79,21 +79,16 @@ class _BetterPlayerWithControlsState extends State<BetterPlayerWithControls> {
       aspectRatio = betterPlayerController.getAspectRatio();
     }
 
-    aspectRatio ??= 16 / 9;
-    if (aspectRatio.isNaN || aspectRatio.isInfinite || aspectRatio <= 0) {
-      aspectRatio = 16 / 9;
-    }
+    final size = MediaQuery.of(context).size;
+
     final innerContainer = Container(
-      width: double.infinity,
-      color: betterPlayerController.betterPlayerConfiguration.controlsConfiguration.backgroundColor,
-      child: AspectRatio(aspectRatio: aspectRatio, child: _buildPlayerWithControls(betterPlayerController, context)),
+      width: size.width,
+      height: size.height, // Take the full screen height
+      color: Colors.black,
+      child: _buildPlayerWithControls(betterPlayerController, context),
     );
 
-    if (betterPlayerController.betterPlayerConfiguration.expandToFill) {
-      return Center(child: innerContainer);
-    } else {
-      return innerContainer;
-    }
+    return innerContainer;
   }
 
   Container _buildPlayerWithControls(BetterPlayerController betterPlayerController, BuildContext context) {
@@ -258,28 +253,34 @@ class _BetterPlayerVideoFitWidgetState extends State<_BetterPlayerVideoFitWidget
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+    final aspectRatio = controller!.value.aspectRatio;
+    ;
+    final isPortraitVideo = aspectRatio < 1.0;
     if (_initialized && _started) {
-      // iOS platform views (UiKitView) don't play well with Clip/Transform/FittedBox.
-      // Render the platform view directly to avoid black screen.
-      if (Platform.isIOS) {
-        return SizedBox.expand(child: VideoPlayer(controller));
-      }
-      return Center(
-        child: ClipRect(
-          child: SizedBox(
-            width: double.infinity,
-            height: double.infinity,
-            child: FittedBox(
-              fit: widget.boxFit,
+      return isPortraitVideo
+          ? MediaQuery.removePadding(
+              context: context,
+              removeTop: true,
+              removeBottom: true,
+              removeLeft: true,
+              removeRight: true,
               child: SizedBox(
-                width: max(1, controller!.value.size?.width ?? 1.0),
-                height: max(1, controller!.value.size?.height ?? 1.0),
-                child: VideoPlayer(controller),
+                width: size.width,
+                height: size.height,
+                child: FittedBox(
+                  fit: BoxFit.cover,
+                  child: SizedBox(
+                    width: controller!.value.size?.width,
+                    height: controller!.value.size?.height,
+                    child: VideoPlayer(controller),
+                  ),
+                ),
               ),
-            ),
-          ),
-        ),
-      );
+            )
+          : Center(
+              child: AspectRatio(aspectRatio: aspectRatio, child: VideoPlayer(controller)),
+            );
     } else {
       return const SizedBox();
     }

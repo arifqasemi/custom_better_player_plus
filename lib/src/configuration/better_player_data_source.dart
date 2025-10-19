@@ -1,10 +1,10 @@
-import 'package:better_player_plus/src/configuration/better_player_buffering_configuration.dart';
-import 'package:better_player_plus/src/configuration/better_player_cache_configuration.dart';
-import 'package:better_player_plus/src/configuration/better_player_data_source_type.dart';
-import 'package:better_player_plus/src/configuration/better_player_drm_configuration.dart';
-import 'package:better_player_plus/src/configuration/better_player_notification_configuration.dart';
-import 'package:better_player_plus/src/configuration/better_player_video_format.dart';
-import 'package:better_player_plus/src/subtitles/better_player_subtitles_source.dart';
+import 'package:custom_better_player_plus/src/configuration/better_player_buffering_configuration.dart';
+import 'package:custom_better_player_plus/src/configuration/better_player_cache_configuration.dart';
+import 'package:custom_better_player_plus/src/configuration/better_player_data_source_type.dart';
+import 'package:custom_better_player_plus/src/configuration/better_player_drm_configuration.dart';
+import 'package:custom_better_player_plus/src/configuration/better_player_notification_configuration.dart';
+import 'package:custom_better_player_plus/src/configuration/better_player_video_format.dart';
+import 'package:custom_better_player_plus/src/subtitles/better_player_subtitles_source.dart';
 import 'package:flutter/widgets.dart';
 
 ///Representation of data source which will be played in Better Player. Allows
