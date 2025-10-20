@@ -25,6 +25,12 @@ class _FullscreenDisplayState extends State<FullscreenDisplay> {
                   BetterPlayer.network(
                     betterPlayerConfiguration: BetterPlayerConfiguration(
                       autoPlay: true,
+                      bufferingConfiguration: BetterPlayerBufferingConfiguration(
+                        minBufferMs: 10000,
+                        maxBufferMs: 50000,
+                        bufferForPlaybackMs: 3000,
+                        bufferForPlaybackAfterRebufferMs: 5000,
+                      ),
                       controlsConfiguration: BetterPlayerControlsConfiguration(showControls: false),
                     ),
                     // snapshot.data!,

@@ -12,6 +12,7 @@ class BetterPlayerConfiguration {
     this.startAt,
     this.looping = false,
     this.fullScreenByDefault = false,
+    this.bufferingConfiguration = const BetterPlayerBufferingConfiguration(),
     this.placeholder,
     this.showPlaceholderUntilPlay = false,
     this.placeholderOnTop = true,
@@ -79,6 +80,7 @@ class BetterPlayerConfiguration {
 
   /// Defines if the player will start in fullscreen when play is pressed
   final bool fullScreenByDefault;
+  final BetterPlayerBufferingConfiguration bufferingConfiguration;
 
   /// Defines if the player will sleep in fullscreen or not
   final bool allowedScreenSleep;
